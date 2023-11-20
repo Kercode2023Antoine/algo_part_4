@@ -23,6 +23,10 @@ class Eleve {
             this.notes.javaScript.push(note)
         }
 
+        this.addNoteMaths = function(note) {
+            this.notes.maths.push(note)
+        }
+
         // this.addNoteEn = function(note){
         //     this.notes.anglais.push(note)
         // }
