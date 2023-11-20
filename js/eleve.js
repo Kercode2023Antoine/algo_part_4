@@ -7,6 +7,7 @@ class Eleve {
             maths: [],
             algorithmique: [],
             javaScript: [],
+            // anglais: [],
         }
 
 
@@ -14,8 +15,18 @@ class Eleve {
             return (`Je suis ${this.prenom} ${this.nom} en formation ${this.classe}.`)
         }
 
+        this.addNoteAlgo = function(note) {
+            this.notes.algorithmique.push(note)
+        }
 
-    }
+        this.addNoteJs = function(note) {
+            this.notes.javaScript.push(note)
+        }
+
+        // this.addNoteEn = function(note){
+        //     this.notes.anglais.push(note)
+        // }
+        
 }
 
-
+}

@@ -112,8 +112,13 @@
             // calcul de la moyenne "algo" via le "sum" obtenue au dessus
             averageNotes = (sum / groupeEleves.length).toFixed(2);
             // Affichage du resultat dans la console
-            console.log(groupeEleves)
-            console.log(averageNotes)
+            console.log(averageNotes);
+
+            // utilisation de la fonction créer sur eleve.js pour l'ajout de note
+            pierreDupont.addNoteAlgo((randomNote(21)));
+
+            // pierreDupont.addNoteEn((randomNote(21)));
+            console.log(groupeEleves);
 
 
             // YOUR CODE HERE
