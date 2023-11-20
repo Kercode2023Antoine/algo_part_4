@@ -1,21 +1,21 @@
-function Eleve(n, p, c ,no){
+class Eleve {
+    constructor(n, p, c) {
+        this.nom = n;
+        this.prenom = p;
+        this.classe = c;
+        this.notes = {
+            maths: [],
+            algorithmique: [],
+            javaScript: [],
+        }
 
-    this.nom = n;
-    this.prenom = p;
-    this.classe = c;
-    no = {
-        maths : [],
-        algorithmique : [],
-        javaScript :[],
-    } 
-    this.notes = no;
 
-    this.hello = function () {
-        return(`Je suis ${this.prenom} ${this.nom} en formation ${this.classe}.`)
+        this.hello = function () {
+            return (`Je suis ${this.prenom} ${this.nom} en formation ${this.classe}.`)
+        }
+
+
     }
-    
-
 }
-    
 
-    
+
