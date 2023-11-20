@@ -67,44 +67,52 @@
 
 
         <script type="text/javascript">
+            // tableau vide pour recevoir des données plus tard
             let groupeEleves = [];
-
+            // Créations de différents objets "Eleve" en lien avec eleve.js
             let pierreDupont = new Eleve("Dupont", "Pierre", "Kercode");
 
             let marieFontaine = new Eleve("Fontaine", "Marie", "Kercode");
 
             let johnHunter = new Eleve("Hunter", "John", "Kercode");
 
+            // Envoi des données Eleve dans le tableau
             groupeEleves.push(pierreDupont, marieFontaine, johnHunter)
-
-
-
+            // affichage de resultat dans la console
             console.log(pierreDupont.prenom)
             console.log(marieFontaine.classe)
 
-
+            // fonction de création de note aléatoire
             function randomNote(max) {
                 return Math.floor(Math.random() * max);
             }
-
+            // création de notes via la fonction "randomNote" en "math" et envoi dans le tableau
             marieFontaine.notes.maths.push(randomNote(21));
             johnHunter.notes.maths.push(randomNote(21));
-            
+            // Affichage des resultats dans la console
+            console.log(marieFontaine.notes.maths)
+            console.log(johnHunter.notes.maths)
 
-            groupeEleves.forEach (function(eleve) {
+            /* 
+             * Utilisation de la boucle forEach combiné a la fonction randomNote 
+             * pour envoyer des notes dans le tableau pour la matiére "Algo"
+            */
+            groupeEleves.forEach(function (eleve) {
                 eleve.notes.algorithmique.push(randomNote(21));
             })
 
-            console.log(groupeEleves)
-            
+
+            // boucle for pour calculer la somme des notes "Algo"
             let sum = 0;
             let averageNotes = 0;
             for (let i = 0; i < groupeEleves.length; i++) {
                 sum += parseInt(groupeEleves[i].notes.algorithmique);
             }
-        
-        
-            averageNotes = (sum / groupeEleves.length).toFixed(2); 
+
+            // calcul de la moyenne "algo" via le "sum" obtenue au dessus
+            averageNotes = (sum / groupeEleves.length).toFixed(2);
+            // Affichage du resultat dans la console
+            console.log(groupeEleves)
             console.log(averageNotes)
 
 
