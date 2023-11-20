@@ -87,11 +87,25 @@
                 return Math.floor(Math.random() * max);
             }
 
-            marieFontaine.notes.maths.push(randomNote(21))
-            johnHunter.notes.maths.push(randomNote(21))
-            console.log(marieFontaine, johnHunter)
+            marieFontaine.notes.maths.push(randomNote(21));
+            johnHunter.notes.maths.push(randomNote(21));
+            
 
+            groupeEleves.forEach (function(eleve) {
+                eleve.notes.algorithmique.push(randomNote(21));
+            })
 
+            console.log(groupeEleves)
+            
+            let sum = 0;
+            let averageNotes = 0;
+            for (let i = 0; i < groupeEleves.length; i++) {
+                sum += parseInt(groupeEleves[i].notes.algorithmique);
+            }
+        
+        
+            averageNotes = (sum / groupeEleves.length).toFixed(2); 
+            console.log(averageNotes)
 
 
             // YOUR CODE HERE
