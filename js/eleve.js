@@ -1,14 +1,17 @@
 function Eleve(n, p, c ,no){
 
-    Eleve.nom = n;
-    Eleve.prenom =p;
-    Eleve.classe = c;
-    Eleve.notes = {
+    this.nom = n;
+    this.prenom = p;
+    this.classe = c;
+    no = {
         maths : [],
         algorithmique : [],
         javaScript :[],
-    } = no;
+    } 
+    this.notes = no;
+    
 
-    }
+}
+    
 
     
