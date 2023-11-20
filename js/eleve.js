@@ -9,6 +9,10 @@ function Eleve(n, p, c ,no){
         javaScript :[],
     } 
     this.notes = no;
+
+    this.hello = function () {
+        alert(`Je suis ${this.prenom} ${this.nom} en formation ${this.classe}.`)
+    }
     
 
 }
