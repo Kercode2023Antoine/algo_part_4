@@ -101,7 +101,7 @@
                 eleve.notes.algorithmique.push(randomNote(21));
             })
             // utilisation de la fonction créer sur eleve.js pour l'ajout de note
-            pierreDupont.addNoteAlgo((randomNote(21)));
+            // pierreDupont.addNoteAlgo((randomNote(21)));
 
             // boucle for pour calculer la somme des notes "Algo"
             // création de "sum" pour recuperer la somme des notes
@@ -111,23 +111,29 @@
             // création de "averageNote" pour récuperer la moyenne
             let averageNotes = 0;
             // boucle for qui voyage dans groupeEleves
-            for (let i = 0; i < groupeEleves.length; i++){
+            for (let i = 0; i < groupeEleves.length; i++) {
                 // boucle for imbriquée dans la précédente pour parcours les notes en algo 
-                for (let j= 0; j < groupeEleves[i].notes.algorithmique.length; j++) {
+                for (let j = 0; j < groupeEleves[i].notes.algorithmique.length; j++) {
                     // +1 nombre de note
-                    number +=1;
+                    number += 1;
                     // somme de toutes les notes
                     sum += parseInt(groupeEleves[i].notes.algorithmique[j]);
-                              
+
                 }
             }
-            console.log(sum);
             // calcul de la moyenne "algo" via le "sum" et le "number" obtenue au dessus
-            averageNotes = (sum / number);
+            averageNotes = (sum / number).toFixed(2);
             // Affichage du resultat dans la console
-            console.log(averageNotes);
+            console.log(`La moyenne de la classe en Algorithmie est de : ${averageNotes}`);
 
-            
+            // utilisation de la methode "hello" créer dans eleve.js
+            johnHunter.hello();
+            // boucle forEach pour ajouter une matiere à chaque Eleve
+            groupeEleves.forEach(function (matter) {
+                matter.addMatter('anglais');
+
+            })
+            console.log(groupeEleves)
         </script>
 </body>
 

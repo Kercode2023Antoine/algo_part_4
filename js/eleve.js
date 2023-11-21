@@ -12,7 +12,8 @@ class Eleve {
     }
 
     hello() {
-        return (`Je suis ${this.prenom} ${this.nom} en formation ${this.classe}.`)
+        alert(`Je suis ${this.prenom} ${this.nom} en formation ${this.classe}.`)
+        // return (`Je suis ${this.prenom} ${this.nom} en formation ${this.classe}.`)
     }
 
     addNoteAlgo(note) {
@@ -27,8 +28,8 @@ class Eleve {
             this.notes.maths.push(note)
         }
 
-    addNote(where, howMuch) {
-       this.notes[where].push(howMuch)
+    addNote(matter, note) {
+       this.notes[matter].push(note)
      }
 
     addMatter(matter){
