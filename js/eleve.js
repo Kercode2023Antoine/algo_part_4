@@ -9,28 +9,32 @@ class Eleve {
             javaScript: [],
             // anglais: [],
         }
+    }
 
+    hello() {
+        return (`Je suis ${this.prenom} ${this.nom} en formation ${this.classe}.`)
+    }
 
-        this.hello = function () {
-            return (`Je suis ${this.prenom} ${this.nom} en formation ${this.classe}.`)
-        }
+    addNoteAlgo(note) {
+        this.notes.algorithmique.push(note)
+    }
 
-        this.addNoteAlgo = function(note) {
-            this.notes.algorithmique.push(note)
-        }
-
-        this.addNoteJs = function(note) {
+    addNoteJs(note) {
             this.notes.javaScript.push(note)
         }
 
-        this.addNoteMaths = function(note) {
+    addNoteMaths(note) {
             this.notes.maths.push(note)
         }
 
-        // this.addNoteEn = function(note){
-        //     this.notes.anglais.push(note)
-        // }
+     AddNote (matter, note) {
         
-}
+     }
+
+    // addNoteEn = function(note){
+    //         this.notes.anglais.push(note)
+    //     }
+        
+
 
 }

@@ -100,30 +100,39 @@
             groupeEleves.forEach(function (eleve) {
                 eleve.notes.algorithmique.push(randomNote(21));
             })
-
-
-            // boucle for pour calculer la somme des notes "Algo"
-            let sum = 0;
-            let averageNotes = 0;
-            for (let i = 0; i < groupeEleves.length; i++) {
-                sum += parseInt(groupeEleves[i].notes.algorithmique);
-            }
-
-            // calcul de la moyenne "algo" via le "sum" obtenue au dessus
-            averageNotes = (sum / groupeEleves.length).toFixed(2);
-            // Affichage du resultat dans la console
-            console.log(averageNotes);
-
             // utilisation de la fonction créer sur eleve.js pour l'ajout de note
             pierreDupont.addNoteAlgo((randomNote(21)));
 
+            // boucle for pour calculer la somme des notes "Algo"
+            let sum = 0;
+            let number = 0;
+            let averageNotes = 0;
+            for (let i = 0; i < groupeEleves.length; i++){
+                for (let j= 0; j < groupeEleves[i].notes.algorithmique.length; j++) {
+                    number +=1;
+                    sum += parseInt(groupeEleves[i].notes.algorithmique[j]);
+                              
+                }
+            }
+            console.log(sum)
+            
+        
+
+            // calcul de la moyenne "algo" via le "sum" obtenue au dessus
+            averageNotes = (sum / number)
+            // Affichage du resultat dans la console
+            console.log(averageNotes);
+
+            
+
             // pierreDupont.addNoteEn((randomNote(21)));
-            console.log(groupeEleves);
+            // console.log(groupeEleves);
 
-
+          
+           
             // YOUR CODE HERE
-
-
+            // console.log(groupeEleves);
+            
         </script>
 </body>
 
