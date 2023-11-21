@@ -104,34 +104,29 @@
             pierreDupont.addNoteAlgo((randomNote(21)));
 
             // boucle for pour calculer la somme des notes "Algo"
+            // création de "sum" pour recuperer la somme des notes
             let sum = 0;
+            // création de "number" pour stocker le nombre de note
             let number = 0;
+            // création de "averageNote" pour récuperer la moyenne
             let averageNotes = 0;
+            // boucle for qui voyage dans groupeEleves
             for (let i = 0; i < groupeEleves.length; i++){
+                // boucle for imbriquée dans la précédente pour parcours les notes en algo 
                 for (let j= 0; j < groupeEleves[i].notes.algorithmique.length; j++) {
+                    // +1 nombre de note
                     number +=1;
+                    // somme de toutes les notes
                     sum += parseInt(groupeEleves[i].notes.algorithmique[j]);
                               
                 }
             }
-            console.log(sum)
-            
-        
-
-            // calcul de la moyenne "algo" via le "sum" obtenue au dessus
-            averageNotes = (sum / number)
+            console.log(sum);
+            // calcul de la moyenne "algo" via le "sum" et le "number" obtenue au dessus
+            averageNotes = (sum / number);
             // Affichage du resultat dans la console
             console.log(averageNotes);
 
-            
-
-            // pierreDupont.addNoteEn((randomNote(21)));
-            // console.log(groupeEleves);
-
-          
-           
-            // YOUR CODE HERE
-            // console.log(groupeEleves);
             
         </script>
 </body>

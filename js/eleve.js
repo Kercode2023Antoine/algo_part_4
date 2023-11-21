@@ -27,10 +27,13 @@ class Eleve {
             this.notes.maths.push(note)
         }
 
-     AddNote (matter, note) {
-        
+    addNote(where, howMuch) {
+       this.notes[where].push(howMuch)
      }
 
+    addMatter(matter){
+        this.notes[matter] = []
+    }  
     // addNoteEn = function(note){
     //         this.notes.anglais.push(note)
     //     }
