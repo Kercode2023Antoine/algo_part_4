@@ -9,6 +9,7 @@
     <title>Exo d'Algo(Part 4) - #01 - Les élèves</title>
     <link href="./css/style.css" rel="stylesheet" />
     <script type="text/javascript" src="./js/eleve.js"></script>
+    <script type="text/javascript" src="./js/tools.js"></script>
 </head>
 
 <body>
@@ -127,13 +128,25 @@
             console.log(`La moyenne de la classe en Algorithmie est de : ${averageNotes}`);
 
             // utilisation de la methode "hello" créer dans eleve.js
-            johnHunter.hello();
+            // johnHunter.hello();
             // boucle forEach pour ajouter une matiere à chaque Eleve
             groupeEleves.forEach(function (matter) {
                 matter.addMatter('anglais');
 
             })
+            pierreDupont.addNote('algorithmique', randomNote(21));
+            pierreDupont.addNote('algorithmique', randomNote(21));
             console.log(groupeEleves)
+            let pierreSum = 0;
+            let pierreAverage = 0;
+
+            for (let i = 0; i < pierreDupont.notes.algorithmique.length; i++) {
+                pierreSum += parseInt(pierreDupont.notes.algorithmique[i])
+            }
+            pierreAverage = (pierreSum / pierreDupont.notes.algorithmique.length).toFixed(2)
+            console.log(`La moyenne de Pierre est de ${pierreAverage}.`)
+
+            
         </script>
 </body>
 

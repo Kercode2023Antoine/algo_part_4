@@ -7,7 +7,7 @@ class Eleve {
             maths: [],
             algorithmique: [],
             javaScript: [],
-            // anglais: [],
+
         }
     }
 
@@ -21,24 +21,24 @@ class Eleve {
     }
 
     addNoteJs(note) {
-            this.notes.javaScript.push(note)
-        }
+        this.notes.javaScript.push(note)
+    }
 
     addNoteMaths(note) {
-            this.notes.maths.push(note)
-        }
+        this.notes.maths.push(note)
+    }
 
     addNote(matter, note) {
-       this.notes[matter].push(note)
-     }
+        this.notes[matter].push(note)
+    }
 
-    addMatter(matter){
+    addMatter(matter) {
         this.notes[matter] = []
-    }  
+    }
     // addNoteEn = function(note){
     //         this.notes.anglais.push(note)
     //     }
-        
+
 
 
 }
